@@ -1,1 +1,1 @@
-# module-cron-schedule
+# Magento 2 Cron Schedule Extension

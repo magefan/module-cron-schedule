@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magefan_CronSchedule::cron" title="Cron" translate="title" module="Magefan_CronSchedule" parent="Magento_Backend::system" sortOrder="60" resource="Magefan_CronSchedule::cron" />
+        <add id="Magefan_CronSchedule::schedule_log" title="Schedule Log" module="Magefan_CronSchedule" parent="Magefan_CronSchedule::cron" sortOrder="10" action="cron_schedule/schedule_log/" resource="Magefan_CronSchedule::schedule_log"/>
+        <add id="Magefan_CronSchedule::cron_groups" title="Cron Groups" module="Magefan_CronSchedule" parent="Magefan_CronSchedule::cron" sortOrder="20" action="admin/system_config/edit/section/system" resource="Magento_Config::config_system"/>
+        <add id="Magefan_CronSchedule::cronschedule_configuration" title="Configuration" module="Magefan_CronSchedule" parent="Magefan_CronSchedule::cron" sortOrder="30" action="admin/system_config/edit/section/mfcronschedule" resource="Magefan_CronSchedule::cronschedule_configuration"/>
+    </menu>
+</config>
