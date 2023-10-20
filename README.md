@@ -9,11 +9,8 @@
 
 <img align="right" width="120" height="120" src="https://cm.magefan.com/catalog/product/cache/28b407cef1668fd0bdd6f36db3e8e2f0/i/c/icon-google-tag-manager.jpg">
 
-[Magento 2 Cron Schedule](https://magefan.com/module-cron-schedule)  is a solution for better store performance tracking that eliminates any actions required with your website source code. It allows you to specify the GTM and GA4 tracking IDs in the admin panel, then export the preset tracking tags, import them into your GTM account and get better reporting on various actions in your store. 
 
-Improve store performance tracking with no-effort. 
-
-<a href="https://magefan.com/module-cron-schedule"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/download-magefan-extensions.png"></a><a href="https://magefan.com/module-cron-schedule#live-demo"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/magefan-live-demo.png"></a>
+<a href="https://magefan.com/magento-2-cron-schedule"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/download-magefan-extensions.png"></a><a href="https://magefan.com/magento-2-cron-schedule#live-demo"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/magefan-live-demo.png"></a>
 
 ## Requirements
   * Magento Community 2.2.0-2.4.x (CE, EE, ECE, B2B)
