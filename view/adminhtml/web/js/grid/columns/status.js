@@ -9,17 +9,14 @@ define([
     'use strict';
 
     return Column.extend({
-        defaults: {
-            bodyTmpl: 'ui/grid/cells/html'
-        },
         getLabel: function (record) {
-            var label = this._super(record);
+            var status = this._super(record);
 
-            if (label !== '') {
-                return '<span class="tooltip-severity ' + record.status + '"><span>' + label + '</span></span>';
+            if (status !== '') {
+                return '<span class="tooltip-severity ' + record.status + '"><span>' + status + '</span></span>';
             }
 
-            return label;
+            return status;
         }
     });
 });
