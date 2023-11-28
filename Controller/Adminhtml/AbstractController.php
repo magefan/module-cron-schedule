@@ -44,8 +44,8 @@ abstract class AbstractController extends Action
         if (!$moduleEnabled) {
             $this->messageManager->addErrorMessage(
                 __($this->message ?:
-                    'Mage' . 'fan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.'
-                ));
+                    'Mage' . 'fan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.')
+            );
             $this->_redirect(self::XML_PATH_MODULE_CONFIGURATION);
             return;
         }
