@@ -14,9 +14,9 @@ use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 use Magento\Cron\Model\ResourceModel\Schedule\CollectionFactory;
-use Magento\Backend\App\Action;
+use Magefan\CronSchedule\Controller\Adminhtml\AbstractController;
 
-class MassDelete extends Action implements HttpPostActionInterface
+class MassDelete extends AbstractController implements HttpPostActionInterface
 {
 
     const ADMIN_RESOURCE = 'Magefan_CronSchedule::delete';
@@ -31,16 +31,10 @@ class MassDelete extends Action implements HttpPostActionInterface
     protected $collectionFactory;
 
     /**
-     * @var ScopeConfigInterface
+     * @var string
      */
-    private $scopeConfigInterface;
+    protected $message = 'Magefan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.';
 
-    /**
-     * @param Context $context
-     * @param Filter $filter
-     * @param CollectionFactory $collectionFactory
-     * @param ScopeConfigInterface $scopeConfigInterface
-     */
     public function __construct(
         Context $context,
         Filter $filter,
@@ -49,8 +43,7 @@ class MassDelete extends Action implements HttpPostActionInterface
     ) {
         $this->filter = $filter;
         $this->collectionFactory = $collectionFactory;
-        $this->scopeConfigInterface = $scopeConfigInterface;
-        parent::__construct($context);
+        parent::__construct($context, $scopeConfigInterface);
     }
 
     /**
@@ -59,13 +52,7 @@ class MassDelete extends Action implements HttpPostActionInterface
      */
     public function execute()
     {
-        $moduleEnabled = $this->scopeConfigInterface->getValue(Index::XML_PATH_MODULE_ENABLED);
 
-        if (!$moduleEnabled) {
-            $this->messageManager->addErrorMessage(__('Magefan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.'));
-            $this->_redirect(Index::XML_PATH_MODULE_CONFIGURATION);
-            return;
-        }
         $collection = $this->filter->getCollection($this->collectionFactory->create());
         $collectionSize = $collection->getSize();
 

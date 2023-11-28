@@ -8,23 +8,24 @@ declare(strict_types=1);
 
 namespace Magefan\CronSchedule\Controller\Adminhtml\Schedule\Log;
 
-use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\View\Result\Page;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magefan\CronSchedule\Controller\Adminhtml\AbstractController;
 
-class Index extends Action implements HttpGetActionInterface
+class Index extends AbstractController implements HttpGetActionInterface
 {
-    const XML_PATH_MODULE_ENABLED = 'mfcronschedule/general/enabled';
-    const XML_PATH_MODULE_CONFIGURATION = 'adminhtml/system_config/edit/section/mfcronschedule';
-
     /**
      * @var PageFactory
      */
     protected $resultPageFactory;
-    private $scopeConfigInterface;
+
+    /**
+     * @var string
+     */
+    protected $message = 'Magefan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.';
 
     /**
      * @param Context $context
@@ -36,10 +37,9 @@ class Index extends Action implements HttpGetActionInterface
         PageFactory $resultPageFactory,
         ScopeConfigInterface $scopeConfigInterface
     ) {
-        parent::__construct($context);
+        parent::__construct($context, $scopeConfigInterface);
 
         $this->resultPageFactory = $resultPageFactory;
-        $this->scopeConfigInterface = $scopeConfigInterface;
     }
 
     /**
@@ -47,13 +47,6 @@ class Index extends Action implements HttpGetActionInterface
      */
     public function execute()
     {
-        $moduleEnabled = $this->scopeConfigInterface->getValue(self::XML_PATH_MODULE_ENABLED);
-
-        if (!$moduleEnabled) {
-            $this->messageManager->addErrorMessage(__('Magefan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.'));
-            $this->_redirect(self::XML_PATH_MODULE_CONFIGURATION);
-            return;
-        }
         $resultPage = $this->resultPageFactory->create();
         $resultPage->getConfig()->getTitle()->prepend(__('Schedule Log'));
 
