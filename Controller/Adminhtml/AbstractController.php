@@ -47,7 +47,7 @@ abstract class AbstractController extends Action
                     'Mage' . 'fan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.')
             );
             $this->_redirect(self::XML_PATH_MODULE_CONFIGURATION);
-            return;
+            return $this->_response;
         }
 
         return parent::dispatch($request);
