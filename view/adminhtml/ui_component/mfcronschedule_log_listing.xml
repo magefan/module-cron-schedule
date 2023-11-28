@@ -116,7 +116,7 @@
                 </item>
             </argument>
         </column>
-        <column name="created_at" class="Magento\Ui\Component\Listing\Columns\Date">
+        <column name="created_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">dateRange</item>
@@ -126,7 +126,7 @@
                 </item>
             </argument>
         </column>
-        <column name="scheduled_at" class="Magento\Ui\Component\Listing\Columns\Date">
+        <column name="scheduled_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">dateRange</item>
@@ -136,7 +136,7 @@
                 </item>
             </argument>
         </column>
-        <column name="executed_at" class="Magento\Ui\Component\Listing\Columns\Date">
+        <column name="executed_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">dateRange</item>
@@ -146,7 +146,7 @@
                 </item>
             </argument>
         </column>
-        <column name="finished_at" class="Magento\Ui\Component\Listing\Columns\Date">
+        <column name="finished_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">dateRange</item>
