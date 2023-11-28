@@ -23,11 +23,6 @@ class Index extends AbstractController implements HttpGetActionInterface
     protected $resultPageFactory;
 
     /**
-     * @var string
-     */
-    protected $message = 'Magefan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.';
-
-    /**
      * @param Context $context
      * @param PageFactory $resultPageFactory
      * @param ScopeConfigInterface $scopeConfigInterface
@@ -38,7 +33,6 @@ class Index extends AbstractController implements HttpGetActionInterface
         ScopeConfigInterface $scopeConfigInterface
     ) {
         parent::__construct($context, $scopeConfigInterface);
-
         $this->resultPageFactory = $resultPageFactory;
     }
 
@@ -49,7 +43,6 @@ class Index extends AbstractController implements HttpGetActionInterface
     {
         $resultPage = $this->resultPageFactory->create();
         $resultPage->getConfig()->getTitle()->prepend(__('Schedule Log'));
-
         return $resultPage;
     }
 }

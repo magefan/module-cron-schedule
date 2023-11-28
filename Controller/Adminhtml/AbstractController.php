@@ -42,7 +42,10 @@ abstract class AbstractController extends Action
         $moduleEnabled = $this->scopeConfigInterface->getValue(self::XML_PATH_MODULE_ENABLED);
 
         if (!$moduleEnabled) {
-            $this->messageManager->addErrorMessage(__($this->message));
+            $this->messageManager->addErrorMessage(
+                __($this->message ?:
+                    'Mage' . 'fan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.'
+                ));
             $this->_redirect(self::XML_PATH_MODULE_CONFIGURATION);
             return;
         }

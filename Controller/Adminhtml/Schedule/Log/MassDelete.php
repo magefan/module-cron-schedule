@@ -18,8 +18,8 @@ use Magefan\CronSchedule\Controller\Adminhtml\AbstractController;
 
 class MassDelete extends AbstractController implements HttpPostActionInterface
 {
-
     const ADMIN_RESOURCE = 'Magefan_CronSchedule::delete';
+
     /**
      * @var Filter
      */
@@ -31,10 +31,11 @@ class MassDelete extends AbstractController implements HttpPostActionInterface
     protected $collectionFactory;
 
     /**
-     * @var string
+     * @param Context $context
+     * @param Filter $filter
+     * @param CollectionFactory $collectionFactory
+     * @param ScopeConfigInterface $scopeConfigInterface
      */
-    protected $message = 'Magefan Cr' . 'on Schedule is dis' . 'abled. Plea' . 'se enable it fir' . 'st.';
-
     public function __construct(
         Context $context,
         Filter $filter,
