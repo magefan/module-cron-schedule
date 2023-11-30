@@ -12,7 +12,7 @@
 [Magento 2 Cron Schedule](https://magefan.com/magento-2-cron-schedule) is a fully featured extension that allows you to manage cron jobs right from the admin panel. You can view all cron jobs in a grid, monitor their workflow in the cron timeline and check the schedule in the log. 
 Make sure all cron jobs are executed properly by initiating them yourself from the backend. Edit and execute your cron jobs in a few clicks. 
 
-<a href="https://magefan.com/magento-2-cron-schedule"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/download-magefan-extensions.png"></a>
+<a href="https://magefan.com/magento-2-cron-schedule"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/download-magefan-extensions.png"></a><a href="https://magefan.com/magento-2-cron-schedule#live-demo"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/magefan-live-demo.png"></a>
 
 ## Requirements
   * Magento Community 2.2.0-2.4.x (CE, EE, ECE, B2B)
