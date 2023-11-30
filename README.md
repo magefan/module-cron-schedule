@@ -7,12 +7,75 @@
 
 <img width="150" height="100" src="https://magefan.com/media/wysiwyg/made_in_ukraine.jpg">
 
-<a href="https://magefan.com/magento-2-cron-schedule"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/download-magefan-extensions.png"></a><a href="https://magefan.com/magento-2-cron-schedule#live-demo"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/magefan-live-demo.png"></a>
+<img align="right" width="120" height="120" src="https://cm.magefan.com/catalog/product/cache/28b407cef1668fd0bdd6f36db3e8e2f0/i/c/icon-cron-schedule.jpg">
+
+[Magento 2 Cron Schedule](https://magefan.com/magento-2-cron-schedule) is a fully featured extension that allows you to manage cron jobs right from the admin panel. You can view all cron jobs in a grid, monitor their workflow in the cron timeline and check the schedule in the log. 
+Make sure all cron jobs are executed properly by initiating them yourself from the backend. Edit and execute your cron jobs in a few clicks. 
+
+<a href="https://magefan.com/magento-2-cron-schedule"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/download-magefan-extensions.png"></a>
 
 ## Requirements
   * Magento Community 2.2.0-2.4.x (CE, EE, ECE, B2B)
   * [Magefan Community Extension](https://github.com/magefan/module-community) >= v2.1.17. Please install this extension first if you use installation via FTP.
   * **Note** that the extension is free only for the Magento Community (Open Source) Edition. For Magento EE, ECE, B2B you need to purchase the license at magefan.com.
+    
+## Benefits
+* Easy cron execution from the admin panel
+* Timely cron-related error detection
+* More control over cron-operated processes
+
+## Features
+
+* **Manage Cron Jobs from the Admin Panel**
+
+Forget about the troublesome and super technical ways of managing cron jobs in Magento. You no longer need to connect to your store database to schedule or execute cron jobs. We’ve simplified the process with the Magento 2 Cron Schedule Extension. 
+
+It now takes up to a few seconds to find, schedule, execute and log all cron jobs in your store, from Magento and all Magento extensions. The straightforward and intuitive interface of backend grids takes cron management to an entirely new level. 
+
+<p align="center">
+  <img width="853" height="425" src="https://cm.magefan.com/catalog/manage-magento-2-cron-jobs_1.png">
+</p>
+
+
+* **Reschedule and Execute Cron Jobs Easier**
+
+Since all cron jobs are neatly organized in your Magento 2 admin panel, scheduling and executing crons takes a few clicks. Use filters to find the cron job you need and click on the schedule column to start editing it. If more than one cron job needs to be rescheduled, use the bulk editor.
+
+Whether it’s a cron job grid or a cron schedule section, you can easily execute any cron job simply by clicking on the corresponding buttons. 
+
+<p align="center">
+  <img width="853" height="425" src="https://cm.magefan.com/catalog/magento-cron-jobs_1.png">
+</p>
+
+* **Keep Track of All Cron Tasks in Your Store**
+
+Using the Magento 2 Cron Schedule Extension you’ll never wonder if any cron job failed, was missed or didn’t run. Cron Jobs Schedule will provide all the necessary details, along with the status of the cron job and the time it was created, scheduled, executed and finished. 
+
+And if some cron job wasn’t executed, you’ll be able to execute it right from the grid. So, you won’t miss anything. 
+
+<p align="center">
+  <img width="853" height="425" src="https://cm.magefan.com/catalog/magento-2-cron-schedule_1.png">
+</p>
+
+* **Monitor Cron Execution in a Timeline**
+
+If you’d like to view the cron jobs workflow in chronological order, we’ve got great news. Magento 2 Cron Schedule extension comes with the visual timeline for each cron job in your store. It enables you to track cron tasks up to seconds and optimize the process as necessary. 
+
+Moreover, when you hover a mouse over a single slot in the timeline, you can see all the cron details. 
+
+<p align="center">
+  <img width="853" height="425" src="https://cm.magefan.com/catalog/magento-2-cron-scedule-timeline_1.png">
+</p>
+
+* **Get Notified if There Are Any Issues**
+
+Every cron flow is logged with all the details related to it. So you won’t miss any details related to them. However, you won’t sit there reloading the cron schedule grid to see if any errors occurred. You won’t miss it anyway. 
+
+Our Magento 2 Cron Schedule Extension will send you notifications about any errors related to cron at a specific time. Just define the email sender, received, template and time when you’d like to be notified about your cron processes. We’ll notify you if something goes wrong. 
+
+<p align="center">
+  <img width="853" height="425" src="https://cm.magefan.com/catalog/cron-job-notifications-magento_1.png">
+</p>
 
 ## Support
 If you have any issues, please [contact us](mailto:support@magefan.com)
