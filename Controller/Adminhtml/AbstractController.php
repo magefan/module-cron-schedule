@@ -22,6 +22,11 @@ abstract class AbstractController extends Action
      * @var string
      */
     protected $message = '';
+    
+    /**
+     * @var ScopeConfigInterface
+     */
+    protected $scopeConfigInterface;
 
     /**
      * @param Context $context
