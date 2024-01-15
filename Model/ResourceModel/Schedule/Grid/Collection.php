@@ -25,6 +25,10 @@ use Magento\Framework\Api\SearchCriteriaInterface;
 class Collection extends ScheduleCollection implements SearchResultInterface
 {
     /**
+     * @var string
+     */
+    protected $_idFieldName = 'schedule_id';
+    /**
      * @var TimezoneInterface
      */
     private $timeZone;
