@@ -7,7 +7,7 @@
 !-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="mfcronschedule" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+        <section id="mfcronschedule" translate="label" type="text" sortOrder="10026325940" showInDefault="1" showInWebsite="0" showInStore="0">
             <class>separator-top</class>
             <label>Cron Schedule</label>
             <tab>magefan</tab>
