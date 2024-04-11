@@ -85,6 +85,37 @@ Our Magento 2 Cron Schedule Extension will send you notifications about any erro
   <img width="853" height="425" src="https://cm.magefan.com/catalog/cron-job-notifications-magento_1.png">
 </p>
 
+## Demo
+
+Try out our open demo and if you like our extension **please give us some star on Github ★**
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">
+        Admin Panel Demo
+      </td align="center" valign="middle">
+    </tr>
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://csh.demo.magefan.top/admin/cron_schedule/schedule_log/">
+          <img
+            src="https://magefan.com/static/version1520969775/frontend/Magefan/new/en_US/images/product-tab-demo-2.jpg"
+            alt="Magento 2 Cron Schedule Admin Panel Demo"
+            height="220"
+          >
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://csh.demo.magefan.top/admin/cron_schedule/schedule_log/">
+          view
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Support
 If you have any issues, please [contact us](mailto:support@magefan.com)
 then if you still need help, open a bug report in GitHub's
