@@ -21,4 +21,5 @@
             <argument name="resourceModel" xsi:type="string">Magento\Cron\Model\ResourceModel\Schedule</argument>
         </arguments>
     </type>
+    <preference for="Magento\Cron\Observer\ProcessCronQueueObserver" type="Magefan\CronSchedule\Rewrite\Magento\Cron\Observer\ProcessCronQueueObserver"/>
 </config>

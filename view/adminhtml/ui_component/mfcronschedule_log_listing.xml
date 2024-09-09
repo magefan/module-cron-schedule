@@ -116,10 +116,21 @@
                 </item>
             </argument>
         </column>
+        <column name="group">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magefan\CronSchedule\Model\Config\Source\CronGroup</item>
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">select</item>
+                    <item name="bodyTmpl" xsi:type="string">ui/grid/cells/html</item>
+                    <item name="dataType" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">Group</item>
+                </item>
+            </argument>
+        </column>
         <column name="created_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">dateRange</item>
+                    <item name="filter" xsi:type="string">datetimeRange</item>
                     <item name="dataType" xsi:type="string">date</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/date</item>
                     <item name="label" xsi:type="string" translate="true">Created At</item>
@@ -129,7 +140,7 @@
         <column name="scheduled_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">dateRange</item>
+                    <item name="filter" xsi:type="string">datetimeRange</item>
                     <item name="dataType" xsi:type="string">date</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/date</item>
                     <item name="label" xsi:type="string" translate="true">Scheduled At</item>
@@ -139,7 +150,7 @@
         <column name="executed_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">dateRange</item>
+                    <item name="filter" xsi:type="string">datetimeRange</item>
                     <item name="dataType" xsi:type="string">date</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/date</item>
                     <item name="label" xsi:type="string" translate="true">Executed At</item>
@@ -149,7 +160,7 @@
         <column name="finished_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">dateRange</item>
+                    <item name="filter" xsi:type="string">datetimeRange</item>
                     <item name="dataType" xsi:type="string">date</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/date</item>
                     <item name="label" xsi:type="string" translate="true">Finished At</item>
