@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Magefan\CronSchedule\Ui\Component;
 
+use Magento\Cms\Ui\Component\AddFilterInterface;
 use Magento\Framework\Api\Filter;
 use Magento\Framework\Api\FilterBuilder;
 use Magento\Framework\Api\Search\SearchCriteriaBuilder;
@@ -102,8 +103,26 @@ class DataProvider extends \Magento\Framework\View\Element\UiComponent\DataProvi
     {
         if (!empty($this->additionalFilterPool[$filter->getField()])) {
             $this->additionalFilterPool[$filter->getField()]->addFilter($this->searchCriteriaBuilder, $filter);
-        } else {
+        } else if (in_array($filter->getField(), ['created_at','scheduled_at', 'executed_at', 'finished_at'])) {
+            $filters = $this->request->getParam('filters')[$filter->getField()];
+
+            if ($filter->getConditionType() == 'gteq' && array_key_exists('from', $filters)) {
+                $fromDate = $filters['from'];
+                $fromDateFormatted = (new \DateTime($fromDate))->format('Y-m-d H:i:s');
+                $filter->setValue($fromDateFormatted);
+                $this->searchCriteriaBuilder->addFilter($filter);
+            }
+
+            if ($filter->getConditionType() == 'lteq' && array_key_exists('to', $filters)) {
+                $toDate = $filters['to'];
+                $toDateFormatted = (new \DateTime($toDate))->format('Y-m-d H:i:s');
+                $filter->setValue($toDateFormatted);
+                $this->searchCriteriaBuilder->addFilter($filter);
+            }
+        }
+        else {
             parent::addFilter($filter);
         }
     }
+
 }
