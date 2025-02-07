@@ -23,12 +23,7 @@ class ProcessCronQueueObserver extends \Magento\Cron\Observer\ProcessCronQueueOb
     protected function createSchedule($jobCode, $cronExpression, $time)
     {
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-        return $this->_scheduleFactory->create()
-            ->setCronExpr($cronExpression)
-            ->setJobCode($jobCode)
-            ->setStatus(Schedule::STATUS_PENDING)
-            ->setCreatedAt(date('Y-m-d H:i:s', $this->dateTime->gmtTimestamp()))
-            ->setScheduledAt(date('Y-m-d H:i', $time))
+        return parent::createSchedule($jobCode, $cronExpression, $time)
             ->setGroup($objectManager->get(\Magefan\CronSchedule\Model\ScheduleConfig::class)->getCronJobGroup($jobCode));
     }
 }
