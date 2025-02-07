@@ -65,7 +65,8 @@ class SetGroupForAllCronSchedule implements DataPatchInterface
 
         $select = $connection->select()
             ->from($tableName, ['job_code'])
-            ->distinct();
+            ->distinct()
+            ->group('job_code');
         $jobCodes = $connection->fetchCol($select);
 
         foreach ($jobCodes as $jobCode) {
