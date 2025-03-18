@@ -125,4 +125,11 @@ class DataProvider extends \Magento\Framework\View\Element\UiComponent\DataProvi
         }
     }
 
+    /**
+     * @return array
+     */
+    public function getData()
+    {
+        return parent::getData();
+    }
 }
