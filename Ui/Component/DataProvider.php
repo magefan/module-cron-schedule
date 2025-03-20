@@ -124,12 +124,4 @@ class DataProvider extends \Magento\Framework\View\Element\UiComponent\DataProvi
             parent::addFilter($filter);
         }
     }
-
-    /**
-     * @return array
-     */
-    public function getData()
-    {
-        return parent::getData();
-    }
 }
