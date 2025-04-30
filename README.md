@@ -3,16 +3,13 @@
 [![Total Downloads](https://poser.pugx.org/magefan/module-cron-schedule/downloads)](https://packagist.org/packages/magefan/module-cron-schedule)
 [![Latest Stable Version](https://poser.pugx.org/magefan/module-cron-schedule/v/stable)](https://packagist.org/packages/magefan/module-cron-schedule)
 
-<a href="https://savelife.in.ua/en/donate-en/#donate-army-card-monthly"><img width="830" height="208" src="https://cm.magefan.com/blog/support-ukraine.png"></a>
-
-<img width="150" height="100" src="https://magefan.com/media/wysiwyg/made_in_ukraine.jpg">
-
 <img align="right" width="120" height="120" src="https://cm.magefan.com/catalog/product/cache/28b407cef1668fd0bdd6f36db3e8e2f0/i/c/icon-cron-schedule.jpg">
 
 [Magento 2 Cron Schedule](https://magefan.com/magento-2-cron-schedule) is a fully featured extension that allows you to manage cron jobs right from the admin panel. You can view all cron jobs in a grid, monitor their workflow in the cron timeline and check the schedule in the log. 
 Make sure all cron jobs are executed properly by initiating them yourself from the backend. Edit and execute your cron jobs in a few clicks. 
 
-<a href="https://magefan.com/magento-2-cron-schedule"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/download-magefan-extensions.png"></a><a href="https://magefan.com/magento-2-cron-schedule#live-demo"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/magefan-live-demo.png"></a>
+
+<a href="https://magefan.com/magento-2-cron-schedule"><img width="190" height="70" src="https://cm.magefan.com/wysiwyg/products/download-magefan-extensions.png"></a>
 
 ## Requirements
   * Magento Community 2.3.0-2.4.x (CE, EE, ECE, B2B)
@@ -99,7 +96,7 @@ Try out our open demo and if you like our extension **please give us some star o
       <td align="center" valign="middle">
         <a href="https://csh.demo.magefan.top/admin/cron_schedule/schedule_log/">
           <img
-            src="https://magefan.com/static/version1520969775/frontend/Magefan/new/en_US/images/product-tab-demo-2.jpg"
+            src="https://cs.magefan.com/version1732118579/frontend/Magefan/next/en_US/Magefan_CssOptimizer/images/product-tab-demo-2.jpg"
             alt="Magento 2 Cron Schedule Admin Panel Demo"
             height="220"
           >
