@@ -124,5 +124,4 @@ class DataProvider extends \Magento\Framework\View\Element\UiComponent\DataProvi
             parent::addFilter($filter);
         }
     }
-
 }

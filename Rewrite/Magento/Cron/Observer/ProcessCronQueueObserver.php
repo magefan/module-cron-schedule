@@ -10,6 +10,7 @@ namespace Magefan\CronSchedule\Rewrite\Magento\Cron\Observer;
 
 use Magento\Cron\Model\Schedule;
 use Magento\Framework\Profiler\Driver\Standard\StatFactory;
+use Magento\Setup\Exception;
 
 class ProcessCronQueueObserver extends \Magento\Cron\Observer\ProcessCronQueueObserver
 {
@@ -25,5 +26,22 @@ class ProcessCronQueueObserver extends \Magento\Cron\Observer\ProcessCronQueueOb
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         return parent::createSchedule($jobCode, $cronExpression, $time)
             ->setGroup($objectManager->get(\Magefan\CronSchedule\Model\ScheduleConfig::class)->getCronJobGroup($jobCode));
+    }
+
+    /**
+     * @param $scheduledTime
+     * @param $currentTime
+     * @param $jobConfig
+     * @param $schedule
+     * @param $groupId
+     * @return void
+     * @throws \Throwable
+     */
+    protected function _runJob($scheduledTime, $currentTime, $jobConfig, $schedule, $groupId) {
+        try {
+            parent::_runJob($scheduledTime, $currentTime, $jobConfig, $schedule, $groupId);
+        } catch (\Exception $e) {
+            $schedule->setMessages($e->getMessage());
+        }
     }
 }
