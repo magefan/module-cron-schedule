@@ -28,7 +28,7 @@ Make sure all cron jobs are executed properly by initiating them yourself from t
   
 <a href="https://magefan.com/magento-2-cron-schedule/pricing">
           <img
-            src="https://cm.magefan.com/wysiwyg/products/magento-cron-schedule-pricing.png"
+            src="https://cm.magefan.com/wysiwyg/products/cron-pricing-plans.png"
             alt="Pricing for Magento 2 Automatic Related Products Extension" />
         </a>
     
