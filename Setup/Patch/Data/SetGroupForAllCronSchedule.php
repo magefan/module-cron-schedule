@@ -72,7 +72,7 @@ class SetGroupForAllCronSchedule implements DataPatchInterface
         foreach ($jobCodes as $jobCode) {
             $group = $this->scheduleConfig->getCronJobGroup($jobCode);
 
-            if ($group){
+            if ($group) {
                 $connection->update(
                     $tableName,
                     ['group' => $group],
