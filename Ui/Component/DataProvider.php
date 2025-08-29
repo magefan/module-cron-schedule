@@ -103,7 +103,7 @@ class DataProvider extends \Magento\Framework\View\Element\UiComponent\DataProvi
     {
         if (!empty($this->additionalFilterPool[$filter->getField()])) {
             $this->additionalFilterPool[$filter->getField()]->addFilter($this->searchCriteriaBuilder, $filter);
-        } else if (in_array($filter->getField(), ['created_at','scheduled_at', 'executed_at', 'finished_at'])) {
+        } elseif (in_array($filter->getField(), ['created_at','scheduled_at', 'executed_at', 'finished_at'])) {
             $filters = $this->request->getParam('filters')[$filter->getField()];
 
             if ($filter->getConditionType() == 'gteq' && array_key_exists('from', $filters)) {
@@ -119,8 +119,7 @@ class DataProvider extends \Magento\Framework\View\Element\UiComponent\DataProvi
                 $filter->setValue($toDateFormatted);
                 $this->searchCriteriaBuilder->addFilter($filter);
             }
-        }
-        else {
+        } else {
             parent::addFilter($filter);
         }
     }

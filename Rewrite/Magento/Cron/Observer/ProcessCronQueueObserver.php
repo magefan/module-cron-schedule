@@ -37,7 +37,8 @@ class ProcessCronQueueObserver extends \Magento\Cron\Observer\ProcessCronQueueOb
      * @return void
      * @throws \Throwable
      */
-    protected function _runJob($scheduledTime, $currentTime, $jobConfig, $schedule, $groupId) {
+    protected function _runJob($scheduledTime, $currentTime, $jobConfig, $schedule, $groupId)
+    {
         try {
             parent::_runJob($scheduledTime, $currentTime, $jobConfig, $schedule, $groupId);
         } catch (\Exception $e) {
