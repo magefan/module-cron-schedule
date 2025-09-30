@@ -22,8 +22,7 @@ class ScheduleConfig
      */
     public function __construct(
         CronConfig $cronConfig
-    )
-    {
+    ) {
         $this->cronConfig = $cronConfig;
     }
 
@@ -37,7 +36,7 @@ class ScheduleConfig
 
         foreach ($cronJobs as $group => $groupConfig) {
 
-            if (array_key_exists($jobCode,$groupConfig)) {
+            if (array_key_exists($jobCode, $groupConfig)) {
                 return $group;
             }
         }
