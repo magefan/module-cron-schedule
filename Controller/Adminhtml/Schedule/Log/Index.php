@@ -37,6 +37,8 @@ class Index extends AbstractController implements HttpGetActionInterface
     }
 
     /**
+     * Render schedule log grid page
+     *
      * @return \Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\ResultInterface|Page
      */
     public function execute()

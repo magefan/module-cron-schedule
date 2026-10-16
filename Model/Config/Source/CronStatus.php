@@ -13,9 +13,11 @@ use Magento\Cron\Model\Schedule;
 class CronStatus implements OptionSourceInterface
 {
     /**
+     * Get cron statuses as value => label array
+     *
      * @return array
      */
-    public static function getOptionArray()
+    public function getOptionArray()
     {
         return [
             Schedule::STATUS_PENDING => __('Pending'),
@@ -27,13 +29,15 @@ class CronStatus implements OptionSourceInterface
     }
 
     /**
+     * Get options
+     *
      * @return array
      */
     public function toOptionArray()
     {
         $result = [];
 
-        foreach ($this::getOptionArray() as $index => $value) {
+        foreach ($this->getOptionArray() as $index => $value) {
             $result[] = ['value' => $index, 'label' => $value];
         }
 

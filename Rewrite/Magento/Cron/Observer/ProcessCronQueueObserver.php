@@ -15,9 +15,11 @@ use Magento\Setup\Exception;
 class ProcessCronQueueObserver extends \Magento\Cron\Observer\ProcessCronQueueObserver
 {
     /**
-     * @param $jobCode
-     * @param $cronExpression
-     * @param $time
+     * Create schedule and set its cron group
+     *
+     * @param string $jobCode
+     * @param string $cronExpression
+     * @param int $time
      * @return Schedule
      * @throws \Magento\Framework\Exception\CronException
      */
@@ -25,15 +27,19 @@ class ProcessCronQueueObserver extends \Magento\Cron\Observer\ProcessCronQueueOb
     {
         $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
         return parent::createSchedule($jobCode, $cronExpression, $time)
-            ->setGroup($objectManager->get(\Magefan\CronSchedule\Model\ScheduleConfig::class)->getCronJobGroup($jobCode));
+            ->setGroup(
+                $objectManager->get(\Magefan\CronSchedule\Model\ScheduleConfig::class)->getCronJobGroup($jobCode)
+            );
     }
 
     /**
-     * @param $scheduledTime
-     * @param $currentTime
-     * @param $jobConfig
-     * @param $schedule
-     * @param $groupId
+     * Run job and save exception message to schedule on failure
+     *
+     * @param int $scheduledTime
+     * @param int $currentTime
+     * @param array $jobConfig
+     * @param Schedule $schedule
+     * @param string $groupId
      * @return void
      * @throws \Throwable
      */

@@ -44,6 +44,21 @@ class Collection extends ScheduleCollection implements SearchResultInterface
     /** @var string */
     private $resourceModel;
 
+    /**
+     * @param EntityFactoryInterface $entityFactory
+     * @param LoggerInterface $logger
+     * @param FetchStrategyInterface $fetchStrategy
+     * @param ManagerInterface $eventManager
+     * @param string $mainTable
+     * @param string $eventPrefix
+     * @param string $eventObject
+     * @param string $resourceModel
+     * @param string $model
+     * @param AdapterInterface|null $connection
+     * @param AbstractDb|null $resource
+     * @param TimezoneInterface|null $timeZone
+     * @SuppressWarnings(PHPMD.ExcessiveParameterList)
+     */
     public function __construct(
         EntityFactoryInterface $entityFactory,
         LoggerInterface $logger,
@@ -68,7 +83,9 @@ class Collection extends ScheduleCollection implements SearchResultInterface
     }
 
     /**
-     * @return $this|Collection|void
+     * Init select and add execution time column
+     *
+     * @return $this
      */
     protected function _initSelect()
     {

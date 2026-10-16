@@ -27,7 +27,9 @@ class ScheduleConfig
     }
 
     /**
-     * @param $jobCode
+     * Get cron group code by job code
+     *
+     * @param string $jobCode
      * @return int|string|null
      */
     public function getCronJobGroup($jobCode)

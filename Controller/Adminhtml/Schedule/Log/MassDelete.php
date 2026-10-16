@@ -18,7 +18,7 @@ use Magefan\CronSchedule\Controller\Adminhtml\AbstractController;
 
 class MassDelete extends AbstractController implements HttpPostActionInterface
 {
-    const ADMIN_RESOURCE = 'Magefan_CronSchedule::delete';
+    public const ADMIN_RESOURCE = 'Magefan_CronSchedule::delete';
 
     /**
      * @var Filter
@@ -48,7 +48,9 @@ class MassDelete extends AbstractController implements HttpPostActionInterface
     }
 
     /**
-     * @return \Magento\Backend\Model\View\Result\Redirect|\Magento\Framework\App\ResponseInterface|\Magento\Framework\Controller\ResultInterface|void
+     * Delete selected schedule records
+     *
+     * @return \Magento\Backend\Model\View\Result\Redirect
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function execute()

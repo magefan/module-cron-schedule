@@ -15,8 +15,8 @@ use Magento\Framework\App\RequestInterface;
 
 abstract class AbstractController extends Action
 {
-    const XML_PATH_MODULE_ENABLED = 'mfcronschedule/general/enabled';
-    const XML_PATH_MODULE_CONFIGURATION = 'adminhtml/system_config/edit/section/mfcronschedule';
+    public const XML_PATH_MODULE_ENABLED = 'mfcronschedule/general/enabled';
+    public const XML_PATH_MODULE_CONFIGURATION = 'adminhtml/system_config/edit/section/mfcronschedule';
 
     /**
      * @var string
@@ -39,6 +39,8 @@ abstract class AbstractController extends Action
     }
 
     /**
+     * Redirect to module configuration if the extension is disabled
+     *
      * @param RequestInterface $request
      * @return \Magento\Framework\App\ResponseInterface
      */

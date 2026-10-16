@@ -37,6 +37,8 @@ class SetGroupForAllCronSchedule implements DataPatchInterface
     }
 
     /**
+     * Get patch dependencies
+     *
      * @return array|string[]
      */
     public static function getDependencies()
@@ -46,6 +48,8 @@ class SetGroupForAllCronSchedule implements DataPatchInterface
     }
 
     /**
+     * Get patch aliases
+     *
      * @return array|string[]
      */
     public function getAliases()
@@ -54,6 +58,8 @@ class SetGroupForAllCronSchedule implements DataPatchInterface
     }
 
     /**
+     * Set group for all existing cron schedule records
+     *
      * @return void
      */
     public function apply()
